@@ -5,8 +5,14 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="../Styles/Styles_Day.css">
-    <link rel="stylesheet" href="../Styles/Styles_Night.css">
+    <?php
+    $a = date('H');
+    if ($a > 10 && $a < 22){
+        echo '<link href="../Styles/Styles_Night.css" rel="stylesheet">';
+    }else{
+        echo '<link href="../Styles/Styles_Day.css" rel="stylesheet">';
+    }
+    ?>
     <title>Document</title>
 </head>
 <body>
@@ -15,7 +21,7 @@
         <div class="link"><a href="#Books">Книги</a></div>
         <div class="logo"><a href="#Wel">SG</a></div>
         <div class="link"><a href="#Games">Игры</a></div>
-        <div class="link"><a href="">"Лучший сон"</a></div>
+        <div class="link"><a href="HW.php">"Вся домашка тут"</a></div>
 </header>
 <div class="Welcome" id="Wel">Привет ! Меня зовут Сергей и ты на моей первой странице</div>
 <div class="container">
@@ -69,5 +75,9 @@
     <div class="text">Удивительную историю о себе рассказывает молодой человек, к которому периодически подсаживаются люди на скамейке в городе Саванна, что находится в Штате Джорджия. Дело происходит на заре 80-х годов, а человека, сидящего на скамье, зовут Форрест Гамп.</div>
     <div class="text">Пострадав в результате несчастного случая, богатый аристократ Филипп нанимает в помощники человека, который менее всего подходит для этой работы, — молодого жителя предместья Дрисса, только что освободившегося из тюрьмы.</div>
 </div>
+<?php
+date_default_timezone_set ('Asia/Yekaterinburg');
+echo date('H:i');
+?>
 </body>
 </html>
