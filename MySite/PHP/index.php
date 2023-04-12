@@ -1,3 +1,11 @@
+<?php
+$a = date('H');
+if ($a >= 10 or $a < 22){
+    echo '<link href="../Styles/Styles_Night.css" rel="stylesheet">';
+}else{
+    echo '<link href="../Styles/Styles_Day.css" rel="stylesheet">';
+}
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -5,14 +13,6 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <?php
-    $a = date('H');
-    if ($a > 10 && $a < 22){
-        echo '<link href="../Styles/Styles_Night.css" rel="stylesheet">';
-    }else{
-        echo '<link href="../Styles/Styles_Day.css" rel="stylesheet">';
-    }
-    ?>
     <title>Document</title>
 </head>
 <body>
@@ -21,7 +21,7 @@
         <div class="link"><a href="#Books">Книги</a></div>
         <div class="logo"><a href="#Wel">SG</a></div>
         <div class="link"><a href="#Games">Игры</a></div>
-        <div class="link"><a href="HW.php">"Вся домашка тут"</a></div>
+        <div class="link"><a href="HW.php#start">"Вся домашка тут"</a></div>
 </header>
 <div class="Welcome" id="Wel">Привет ! Меня зовут Сергей и ты на моей первой странице</div>
 <div class="container">
